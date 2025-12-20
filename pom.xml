@@ -15,7 +15,6 @@
         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

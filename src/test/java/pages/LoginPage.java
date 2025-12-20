@@ -20,7 +20,7 @@ public class LoginPage {
         driver.navigate().to(url);
     }
 
-    public void login (String username, String password) {
+    public void login(String username, String password) {
         driver.findElement(USERNAME).clear();
         driver.findElement(USERNAME).sendKeys(username);
 

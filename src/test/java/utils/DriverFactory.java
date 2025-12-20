@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class DriverFactory {
 
-
     private static final Logger log = LogManager.getLogger(DriverFactory.class);
 
     public static WebDriver createDriver(BrowserType browser) {

@@ -29,13 +29,14 @@ https://www.saucedemo.com/
 * Пакет tests -> SwagLabLoginTests
 ---
 ## MacOS / Ubuntu
+## MacOS / Ubuntu
 * bash
-  войти в корневую папку проекта
-  mvn clean test
+* войти в корневую папку проекта
+* mvn clean test
 * mvn clean test allure:report
 * файл Allure report: target/site/allure-maven-plugin
 * Запуск Allure report
-  cd target/site/allure-maven-plugin
+* cd target/site/allure-maven-plugin
   python3 -m http.server 8000
-  в браузере: http://localhost:8000
+* в браузере: http://localhost:8000
 

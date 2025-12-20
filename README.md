@@ -37,4 +37,4 @@ https://www.saucedemo.com/
 * Запуск Allure report
 * cd target/site/allure-maven-plugin
   python3 -m http.server 8000
-  в браузере: http://localhost:8000
+* в браузере: http://localhost:8000

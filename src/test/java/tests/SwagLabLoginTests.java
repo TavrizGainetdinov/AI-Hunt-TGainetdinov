@@ -12,7 +12,6 @@ import utils.TestLoggerExtension;
 import utils.LoginCredentialsExtractor;
 import io.qameta.allure.Description;
 
-
 @ExtendWith(TestLoggerExtension.class)
 public class SwagLabLoginTests {
 

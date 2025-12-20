@@ -34,4 +34,3 @@ public class LoginPage {
         return driver.findElement(ERROR).getText();
     }
 }
-

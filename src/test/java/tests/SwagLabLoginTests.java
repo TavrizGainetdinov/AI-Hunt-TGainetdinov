@@ -12,7 +12,6 @@ import utils.TestLoggerExtension;
 import utils.LoginCredentialsExtractor;
 import io.qameta.allure.Description;
 
-
 @ExtendWith(TestLoggerExtension.class)
 public class SwagLabLoginTests {
 
@@ -79,7 +78,7 @@ public class SwagLabLoginTests {
             loginPage.login(creds(driver).getUsername(1), creds(driver).getPassword());
 
             Assertions.assertEquals("Epic sadface: Sorry, this user has been locked out.",
-                            loginPage.getErrorText());
+                    loginPage.getErrorText());
         } finally {
             driver.quit();
         }
@@ -131,4 +130,3 @@ public class SwagLabLoginTests {
         return new LoginCredentialsExtractor(driver);
     }
 }
-

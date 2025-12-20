@@ -1,7 +1,6 @@
 package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,5 +40,4 @@ public class LoginCredentialsExtractor {
         return getUsernames().get(index);
     }
 }
-
 

@@ -34,7 +34,7 @@ https://www.saucedemo.com/
 * mvn clean test
 * mvn clean test allure:report
 * файл Allure report: target/site/allure-maven-plugin
-* Запуск Allure report:
+* Запуск Allure report
 * cd target/site/allure-maven-plugin
   python3 -m http.server 8000
 * в браузере: http://localhost:8000

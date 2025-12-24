@@ -12,6 +12,10 @@ import utils.TestLoggerExtension;
 import utils.LoginCredentialsExtractor;
 import io.qameta.allure.Description;
 
+/**
+ * Тест-класс, наследует testLoggerExtension параметризован по типу браузера.
+ *
+ */
 @ExtendWith(TestLoggerExtension.class)
 public class SwagLabLoginTests {
 
@@ -19,6 +23,7 @@ public class SwagLabLoginTests {
 
     @Description("Standard user")
     @ParameterizedTest(name = "{0} - standardUserTest")
+    // каждый тест исполняется с каждым из браузеров
     @EnumSource(BrowserType.class)
     void standardUserTest(BrowserType browser) {
         WebDriver driver = DriverFactory.createDriver(browser);
@@ -31,11 +36,13 @@ public class SwagLabLoginTests {
             loginPage.open(SAUCE_DEMO_URL);
             loginPage.login(creds(driver).getUsername(0), creds(driver).getPassword());
 
+            // переход на inventory.html = успешный логин
             Assertions.assertTrue(
                     driver.getCurrentUrl().contains("inventory.html"),
                     "Expected inventory in " + browser + " but was: " + driver.getCurrentUrl()
             );
         } finally {
+            // браузер будет закрыт даже если тест "упал"
             driver.quit();
         }
     }
@@ -49,7 +56,6 @@ public class SwagLabLoginTests {
             driver.manage().window().maximize();
 
             LoginPage loginPage = new LoginPage(driver);
-//            LoginCredentialsExtractor creds = new LoginCredentialsExtractor(driver);
 
             loginPage.open(SAUCE_DEMO_URL);
             loginPage.login(creds(driver).getUsername(0), "wrong_pass");
@@ -72,7 +78,6 @@ public class SwagLabLoginTests {
             driver.manage().window().maximize();
 
             LoginPage loginPage = new LoginPage(driver);
-//            LoginCredentialsExtractor creds = new LoginCredentialsExtractor(driver);
 
             loginPage.open(SAUCE_DEMO_URL);
             loginPage.login(creds(driver).getUsername(1), creds(driver).getPassword());
@@ -112,7 +117,6 @@ public class SwagLabLoginTests {
             driver.manage().window().maximize();
 
             LoginPage loginPage = new LoginPage(driver);
-//            LoginCredentialsExtractor creds = new LoginCredentialsExtractor(driver);
 
             loginPage.open(SAUCE_DEMO_URL);
             loginPage.login(creds(driver).getUsername(3), creds(driver).getPassword());

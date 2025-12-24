@@ -6,6 +6,12 @@ import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
+
+/**
+ * Расширение JUnit 5 для логирования начала / окончания каждого теста
+ * Логирование PASS / FAIL.
+ * Реализует BeforeEach и AfterEach для класса tests
+ */
 public class TestLoggerExtension
         implements BeforeEachCallback, AfterEachCallback {
 
@@ -31,3 +37,4 @@ public class TestLoggerExtension
                 context.getDisplayName());
     }
 }
+

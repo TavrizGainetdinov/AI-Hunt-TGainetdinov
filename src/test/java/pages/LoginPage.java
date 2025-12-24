@@ -3,6 +3,10 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Page Object - объект страницы для доступа к
+ * элементам интерфейса SwagLabs
+ */
 public class LoginPage {
 
     private static final By USERNAME = By.cssSelector("#user-name");
@@ -34,3 +38,4 @@ public class LoginPage {
         return driver.findElement(ERROR).getText();
     }
 }
+
